@@ -1,6 +1,6 @@
 # BOJ
 
-<img src="https://raw.githubusercontent.com/kitsune03k/BOJ/main/clion.png">
+<img src="https://raw.githubusercontent.com/kitsune03k/BOJ/main/CLion.png">
 
 [solved.ac Profile](https://solved.ac/profile/thinker99)
 
