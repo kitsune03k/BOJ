@@ -1,3 +1,5 @@
 *.exe
+*.gch
+a.out
 .idea/
 
