@@ -23,12 +23,12 @@ void SReset(Stack *S){
     S->numofdata = 0;
 }
 
-int SSize(Stack *S) {
+int SCount(Stack *S) {
     return S->numofdata;
 }
 
 bool SIsEmpty(Stack *S) {
-    if(SSize(S) == 0) {
+    if(SCount(S) == 0) {
         return true;
     }
     else {
@@ -60,7 +60,7 @@ Data SPop(Stack *S) {
 }
 
 bool SPush(Stack *S, Data D) {
-    if(SSize(S) <= S->sz) {
+    if(SCount(S) <= S->sz) {
         S->numofdata++;
         S->arr[S->numofdata] = D;
         return true; // push 성공

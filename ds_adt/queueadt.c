@@ -103,7 +103,6 @@ Data QPeekTail(Queue *Q) { // 표준 Queue 기능 아님!!
 }
 
 // for debug
-
 void QShow(Queue *Q) {
     if(QIsEmpty(Q) == false) {
         Node *cur;

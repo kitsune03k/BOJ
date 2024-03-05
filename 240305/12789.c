@@ -18,7 +18,7 @@ void StackInit(Stack *S, int stsz) {
     S->numofdata = 0;
 }
 
-void SReset(Stack *S){
+void SReset(Stack *S) {
     memset(S->arr, 0, sizeof(Data) * (S->sz + 1));
     S->numofdata = 0;
 }
@@ -84,21 +84,72 @@ void SShow(Stack *S) {
     }
 }
 
-int main(void){
+
+int main(void) {
+    char *rslt[2] = {"Sad", "Nice"};
+
+    Stack *S1 = (Stack *) malloc(sizeof(Stack));
+    Stack *S2 = (Stack *) malloc(sizeof(Stack));
+    StackInit(S1, 1000);
+    StackInit(S2, 1000);
+    S1->arr[0] = 1004;
+    S2->arr[0] = 1004;
+
     int n;
     scanf("%d", &n);
     getchar();
 
     int arr[n];
-    for(int i=0; i<n; i++){
+    for(int i = 0; i < n; i++) {
         scanf("%d", &arr[i]);
         getchar();
     }
 
-    int count = 1;
-    int arridx = 0;
-    while(1){
+    for(int i = n - 1; i >= 0; i--) {
+        SPush(S1, arr[i]);
+    } // S1이 시작 스텍, 다시 못 집어넣음
 
+    bool possible = true;
+    int count = 1;
+    while(1) {
+        if(SSize(S1) == 0 && SSize(S1) == 0) {
+            break;
+        }
+        else {
+            if(SPeek(S1) == count) {
+                SPop(S1);
+                count++;
+            }
+            else if(SPeek(S2) == count) {
+                SPop(S2);
+                count++;
+            }
+            else {
+                if(SIsEmpty(S2)) { // S2가 비었을 때
+                    SPush(S2, SPop(S1));
+                }
+                else { // S2가 비지 않았을때
+                    if(SPeek(S2) > SPeek(S1)) {
+                        SPush(S2, SPop(S1));
+                    }
+                    else {
+                        possible = false;
+                        break;
+                    }
+                }
+            }
+        }
     }
+
+    printf("%s", rslt[possible]);
+
+    free(S1->arr);
+    free(S2->arr);
+    free(S1);
+    free(S2);
+
+
+    return 0;
+
 
 }
