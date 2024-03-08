@@ -4,7 +4,7 @@
 
 int arr[300][300];
 
-void knight(int r, int c, int len, int t) { // 딱!! 8개중에 조건맞는거만 움직인다!!!
+void knight(int r, int c, int len, int t) { // 딱!! 8개중에 조건 맞는거만 움직인다!!!
     if(r - 1 >= 0 && c - 2 >= 0) {
         if(arr[r - 1][c - 2] == -1) {
             arr[r - 1][c - 2] = t;
@@ -79,20 +79,17 @@ int main(void) {
 
         arr[row1][col1] = 0;
 
-        for(int m = 0; m < l; m++) {
-            printf("*** m = %d ***\n", m);
+        for(int m = 0; m < l+2; m++) {
             for(int i = 0; i < l; i++) {
                 for(int j = 0; j < l; j++) {
                     if(arr[i][j] == m) {
-                        printf("[%d][%d] %d eureka!!\n", i, j, m);
                         knight(i, j, l, m + 1); // 갈 수 있는 8개만 확장!!
                         // checked가 필요가 없는것이, arr[i][j]가 어차피 -1이면 칠해야 하는거고 -1이 아니면 칠하면 안됨.
                     }
                 }
             }
-            show(l);
-            printf("\n");
         }
+
         ans[c] = arr[row2][col2];
     }
 
