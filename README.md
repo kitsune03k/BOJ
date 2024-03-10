@@ -1,6 +1,11 @@
 # BOJ
+<img src="https://raw.githubusercontent.com/kitsune03k/BOJ/main/CLion.png">
 
-## 1. 맞은문제
+[solved.ac Profile](https://solved.ac/profile/thinker99)
+
+[BOJ Profile](https://www.acmicpc.net/user/thinker99)
+
+## 1. 맞은 문제
 문제번호
 
 시간초과시 T
@@ -16,7 +21,7 @@
 디버그코드가 있는지 d, 없는지
 
 
-## 2. failed
+## 2. 틀린 문제
 
 문제번호
 
@@ -26,8 +31,3 @@ F(몇번째 틀린건지) (지금 작성중인 파일은 안붙힘)
 
 디버그코드가 있는지 d, 없는지
 
-<img src="https://raw.githubusercontent.com/kitsune03k/BOJ/main/CLion.png">
-
-[solved.ac Profile](https://solved.ac/profile/thinker99)
-
-[BOJ Profile](https://www.acmicpc.net/user/thinker99)
