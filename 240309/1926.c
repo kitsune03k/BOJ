@@ -54,6 +54,6 @@ int main(void) {
         }
     }
 
-    printf("%d %d", pcount, pmaxsz);
+    printf("%d", pcount);
 
 }
