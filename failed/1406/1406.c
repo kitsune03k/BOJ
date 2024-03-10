@@ -122,11 +122,13 @@ int main(void)
     for(int i=0; i<strlen(rt); i++){
         fxP(rt[i]);
     }
-    show();
 
     int M;
     scanf("%d", &M);
     getchar();
+
+    show();
+
 
     char func;
     for(int i=0; i<M; i++){
